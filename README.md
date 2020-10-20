@@ -1,5 +1,5 @@
 # Proyecto: Paginación por demanda
-Este proyecto contiene la aplicación pagingdemand.c que simula la traducción de una dirección lógica a una física en el contexto de paginación por demanda. El sistema soporta direcciones lógicas de 16 bits (8 bits para número de página y 8 bits para tamaño de página) las cuales tienen que estar expresadas en un archivo de texto (addresses.txt) en base decimal dentro de la misma carpeta que pagingdemand.c. Es importante recalcar que el formato de addresses.txt consta de una cifra decimal por línea cuyo valor debe estar en [0, 65535] por lo explicado respecto a 16 bits. Finalmente, el programa hace uso del binario BACKING_STORE.bin para definir el valor obtenido una vez hecha la traducción de dirección lógica a física. En caso de querer usar otro archivo binario o tener otro path, se debe modificar la constante del mismo nombre en include/pagingdemand.h (ver especificaciones). El programa recibe como primer parámetro al achivo de direcciones y como segundo parametro el nombre del archivo que se desea generar con las traducciones realizadas. Éste último mostrará, para cada línea de addresses.txt: dirección lógica, dirección física y valor correspondiente. 
+Este proyecto contiene la aplicación pagingdemand.c que simula la traducción de una dirección lógica a una física en el contexto de paginación por demanda. El sistema soporta direcciones lógicas de 16 bits (8 bits para número de página y 8 bits para tamaño de página) las cuales tienen que estar expresadas en un archivo de texto (addresses.txt) en base decimal dentro de la misma carpeta que pagingdemand.c. Es importante recalcar que el formato de addresses.txt consta de una cifra decimal por línea cuyo valor debe estar en [0, 65535] por lo explicado respecto a 16 bits. Finalmente, el programa hace uso del binario BACKING_STORE.bin para definir el valor obtenido una vez hecha la traducción de dirección lógica a física. En caso de querer usar otro archivo binario o tener otro path, se debe modificar la constante del mismo nombre en include/pagingdemand.h (ver especificaciones). El programa recibe como primer parámetro al archivo de direcciones y como segundo parámetro el nombre del archivo que se desea generar con las traducciones realizadas. Éste último mostrará, para cada línea de addresses.txt: dirección lógica, dirección física y valor correspondiente. 
 
 ## Compilación
 
@@ -14,7 +14,7 @@ make
 make clean
 ```
 
-### USO:
+### Uso:
 
 ```
 ./pagingdemand [archivo .txt de direcciones lógicas] [nombre del reporte a generar]
@@ -23,7 +23,7 @@ Ejemplo:
 ./pagingdemand addresses.txt data.txt
 
 ```
-### Resultados tipicos:<br/>
+### Resultados típicos:<br/>
 
 ```
 Ejecución usando addresses.txt (contenido de data.txt):
@@ -65,4 +65,4 @@ PLANTILLA:          ./pagingdemand addresses.txt data.txt
 
 
 ## Autor
-- Juan Nebel Dunn
+- Juan F. Nebel Dunn
